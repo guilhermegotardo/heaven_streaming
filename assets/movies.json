@@ -1,0 +1,108 @@
+{
+  "videos": [
+    {
+      "id": "m001",
+      "titulo": "Cidade de Deus",
+      "ano": 2002,
+      "duracaoSegundos": 7800,
+      "generos": ["Crime", "Drama"],
+      "nota": 8.6,
+      "descricao": "Dois amigos crescem em uma comunidade e seguem caminhos bem diferentes.",
+      "thumbnailUrl": "https://example.com/thumbs/cidade-de-deus.jpg"
+    },
+    {
+      "id": "m002",
+      "titulo": "Central do Brasil",
+      "ano": 1998,
+      "duracaoSegundos": 6780,
+      "generos": ["Drama"],
+      "nota": 8.0,
+      "descricao": "Uma mulher e um menino viajam pelo interior em busca do pai dele.",
+      "thumbnailUrl": "https://example.com/thumbs/central-do-brasil.jpg"
+    },
+    {
+      "id": "m003",
+      "titulo": "O Auto da Compadecida",
+      "ano": 2000,
+      "duracaoSegundos": 6240,
+      "generos": ["Comedia", "Aventura"],
+      "nota": 8.7,
+      "descricao": "Dois amigos aprontam no sertao e tentam sobreviver com esperteza.",
+      "thumbnailUrl": "https://example.com/thumbs/auto-da-compadecida.jpg"
+    },
+    {
+      "id": "m004",
+      "titulo": "Parasita",
+      "ano": 2019,
+      "duracaoSegundos": 7920,
+      "generos": ["Drama", "Suspense"],
+      "nota": 8.5,
+      "descricao": "Uma familia entra na vida de outra, e as coisas saem do controle.",
+      "thumbnailUrl": "https://example.com/thumbs/parasita.jpg"
+    },
+    {
+      "id": "m005",
+      "titulo": "A Viagem de Chihiro",
+      "ano": 2001,
+      "duracaoSegundos": 7500,
+      "generos": ["Animacao", "Fantasia"],
+      "nota": 8.6,
+      "descricao": "Uma garota entra em um mundo estranho e tenta salvar os pais.",
+      "thumbnailUrl": "https://example.com/thumbs/chihiro.jpg"
+    },
+    {
+      "id": "m006",
+      "titulo": "Interestelar",
+      "ano": 2014,
+      "duracaoSegundos": 10140,
+      "generos": ["Ficcao", "Aventura"],
+      "nota": 8.7,
+      "descricao": "Uma missao espacial busca uma nova casa para a humanidade.",
+      "thumbnailUrl": "https://example.com/thumbs/interestelar.jpg"
+    },
+    {
+      "id": "m007",
+      "titulo": "O Poderoso Chefao",
+      "ano": 1972,
+      "duracaoSegundos": 10500,
+      "generos": ["Crime", "Drama"],
+      "nota": 9.2,
+      "descricao": "A ascensao e os dilemas de uma familia mafiosa.",
+      "thumbnailUrl": "https://example.com/thumbs/poderoso-chefao.jpg"
+    },
+    {
+      "id": "m008",
+      "titulo": "Matrix",
+      "ano": 1999,
+      "duracaoSegundos": 8160,
+      "generos": ["Acao", "Ficcao"],
+      "nota": 8.7,
+      "descricao": "Um programador descobre que a realidade pode ser uma simulacao.",
+      "thumbnailUrl": "https://example.com/thumbs/matrix.jpg"
+    },
+    {
+      "id": "m009",
+      "titulo": "Mad Max: Estrada da Furia",
+      "ano": 2015,
+      "duracaoSegundos": 7200,
+      "generos": ["Acao", "Aventura"],
+      "nota": 8.1,
+      "descricao": "Uma fuga explosiva em um deserto pos-apocaliptico.",
+      "thumbnailUrl": "https://example.com/thumbs/mad-max.jpg"
+    },
+    {
+      "id": "m010",
+      "titulo": "A Chegada",
+      "ano": 2016,
+      "duracaoSegundos": 6960,
+      "generos": ["Ficcao", "Drama"],
+      "nota": 7.9,
+      "descricao": "Uma linguista tenta se comunicar com visitantes misteriosos.",
+      "thumbnailUrl": "null"
+    }
+  ],
+  "meta": {
+    "fonte": "mock-local",
+    "total": 10
+  }
+}
