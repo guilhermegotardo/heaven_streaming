@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../dat/catalog/catalogo_controller.dart';
+import '../../player/media_player.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -99,7 +101,19 @@ final catalogo = CatalogController.instance.catalogo;
             child: const Text("Next Page"),
           ),
 
-          const SizedBox(height: 30),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const PlayerPage(
+                    assetPath: 'assets/videos/sample_video.mp4',
+                  ),
+                ),
+              );
+            },
+            child: const Text('Play'),
+),
 
         ],
       ),
