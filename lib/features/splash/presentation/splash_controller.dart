@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/foundation.dart';
 import '../../../dat/catalog/catalogo_controller.dart';
+
 class SplashController {
   Future<void> initializeApp() async {
     await CatalogController.instance.loadCatalog();
