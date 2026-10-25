@@ -10,7 +10,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Meu App Flutter',
+      title: 'GOTFLIX',
       initialRoute: AppRoutes.splash,
       routes: {
         AppRoutes.splash: (_) => const SplashPage(),

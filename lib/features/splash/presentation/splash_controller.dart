@@ -4,8 +4,8 @@ import '../../../dat/catalog/catalogo_controller.dart';
 
 class SplashController {
   Future<void> initializeApp() async {
-    await CatalogController.instance.loadCatalog();
     try {
+      await CatalogController.instance.loadCatalog();
       final catalogo = CatalogController.instance.catalogo;
       if (kDebugMode) {
         print(catalogo.videos.first.titulo);

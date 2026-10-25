@@ -9,6 +9,7 @@ void main() async {
   MediaKit.ensureInitialized();
   VideoPlayerMediaKit.ensureInitialized(
     windows: true,
+    linux: true,
   );
   runApp(const AppWidget());
 

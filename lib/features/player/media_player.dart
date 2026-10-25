@@ -15,32 +15,46 @@ class PlayerPage extends StatefulWidget {
 
 class _PlayerPageState extends State<PlayerPage> {
   late final VideoPlayerController _controller;
+  bool _hasError = false;
 
   @override
   void initState() {
     super.initState();
 
+    // Rebuilds when the video plays, pauses or ends, keeping the FAB icon in sync.
     _controller = VideoPlayerController.asset(widget.assetPath)
-      ..initialize().then((_) {
-        setState(() {});
-        _controller.play();
-      });
+      ..addListener(_onControllerUpdate);
+    _initialize();
+  }
+
+  Future<void> _initialize() async {
+    try {
+      await _controller.initialize();
+      if (!mounted) return;
+      await _controller.play();
+    } catch (_) {
+      if (!mounted) return;
+      setState(() => _hasError = true);
+    }
+  }
+
+  void _onControllerUpdate() {
+    if (mounted) setState(() {});
   }
 
   @override
   void dispose() {
+    _controller.removeListener(_onControllerUpdate);
     _controller.dispose();
     super.dispose();
   }
 
   void _togglePlayPause() {
-    setState(() {
-      if (_controller.value.isPlaying) {
-        _controller.pause();
-      } else {
-        _controller.play();
-      }
-    });
+    if (_controller.value.isPlaying) {
+      _controller.pause();
+    } else {
+      _controller.play();
+    }
   }
 
   @override
@@ -52,12 +66,14 @@ class _PlayerPageState extends State<PlayerPage> {
         title: const Text('Player'),
       ),
       body: Center(
-        child: isReady
-            ? AspectRatio(
-                aspectRatio: _controller.value.aspectRatio,
-                child: VideoPlayer(_controller),
-              )
-            : const CircularProgressIndicator(),
+        child: _hasError
+            ? const Text('Não foi possível reproduzir o vídeo.')
+            : isReady
+                ? AspectRatio(
+                    aspectRatio: _controller.value.aspectRatio,
+                    child: VideoPlayer(_controller),
+                  )
+                : const CircularProgressIndicator(),
       ),
       floatingActionButton: isReady
           ? FloatingActionButton(

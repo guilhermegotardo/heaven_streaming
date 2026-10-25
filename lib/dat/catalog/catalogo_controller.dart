@@ -15,10 +15,7 @@ class CatalogController {
     return _catalogo!;
   }
 
-  Future<void> loadCatalog() async {
-    if (_catalogo != null) return;
-
-    final dataSource = LocalCatalogDataSource();
-    _catalogo = await dataSource.loadCatalog();
+  Future<Catalogo> loadCatalog() async {
+    return _catalogo ??= await LocalCatalogDataSource().loadCatalog();
   }
 }
