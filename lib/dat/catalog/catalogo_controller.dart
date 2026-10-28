@@ -1,10 +1,13 @@
-import 'local_catalog_data_source.dart';
 import 'catalogo.dart';
+import 'library_catalog_data_source.dart';
+import 'media_library.dart';
 
 class CatalogController {
   CatalogController._();
 
   static final CatalogController instance = CatalogController._();
+
+  final MediaLibrary library = MediaLibrary.fromEnvironment();
 
   Catalogo? _catalogo;
 
@@ -16,6 +19,6 @@ class CatalogController {
   }
 
   Future<Catalogo> loadCatalog() async {
-    return _catalogo ??= await LocalCatalogDataSource().loadCatalog();
+    return _catalogo ??= await LibraryCatalogDataSource(library).loadCatalog();
   }
 }

@@ -43,4 +43,40 @@ lib/
     └── widgets/
         └── app_loading.dart
 
-        flutter run -d web-server --web-hostname 0.0.0.0 --web-port 8080
+
+## Biblioteca de vídeos (local até a v2.0)
+
+Os vídeos não ficam dentro do app. Eles ficam numa pasta servida por HTTP:
+
+```
+example_library/
+├── catalog.json        # metadados; caminhos relativos à pasta
+└── m001/
+    ├── video.mp4
+    └── poster.jpg
+```
+
+Rodando em dois terminais:
+
+```bash
+# 1. Servidor da biblioteca (porta 8081; aceita outra pasta/porta)
+dart run tool/serve_library.dart                      # usa example_library
+dart run tool/serve_library.dart ~/Videos/Gotflix 8081
+
+# 2. App
+flutter run -d web-server --web-hostname 0.0.0.0 --web-port 8080
+flutter run -d linux
+```
+
+Na web, o app busca a biblioteca no mesmo host que o serviu, na porta 8081.
+No desktop, em `localhost:8081`. Para outro endereço:
+
+```bash
+flutter run -d linux --dart-define=LIBRARY_URL=http://192.168.0.10:8081/
+```
+
+Depois de alterar `lib/dat/catalog/catalogo.dart`, regenere o código:
+
+```bash
+dart run build_runner build --delete-conflicting-outputs
+```

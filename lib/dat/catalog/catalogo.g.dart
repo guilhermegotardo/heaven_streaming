@@ -24,7 +24,8 @@ Video _$VideoFromJson(Map<String, dynamic> json) => Video(
   generos: (json['generos'] as List<dynamic>).map((e) => e as String).toList(),
   nota: (json['nota'] as num).toDouble(),
   descricao: json['descricao'] as String,
-  thumbnailUrl: json['thumbnailUrl'] as String,
+  videoPath: json['videoPath'] as String,
+  posterPath: json['posterPath'] as String?,
 );
 
 Map<String, dynamic> _$VideoToJson(Video instance) => <String, dynamic>{
@@ -35,5 +36,6 @@ Map<String, dynamic> _$VideoToJson(Video instance) => <String, dynamic>{
   'generos': instance.generos,
   'nota': instance.nota,
   'descricao': instance.descricao,
-  'thumbnailUrl': instance.thumbnailUrl,
+  'videoPath': instance.videoPath,
+  'posterPath': instance.posterPath,
 };

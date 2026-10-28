@@ -1,104 +1,156 @@
 {
   "videos": [
     {
+      "id": "m000",
+      "titulo": "Sample",
+      "ano": 2077,
+      "duracaoSegundos": 5,
+      "generos": [
+        "NA"
+      ],
+      "nota": 0,
+      "descricao": "Sample Video exemple.",
+      "videoPath": "m000/video.mp4",
+      "posterPath": "m000/poster.jpg"
+    },
+    {
       "id": "m001",
-      "titulo": "Cidade de Deus",
-      "ano": 2002,
-      "duracaoSegundos": 7800,
-      "generos": ["Crime", "Drama"],
-      "nota": 8.6,
-      "descricao": "Dois amigos crescem em uma comunidade e seguem caminhos bem diferentes.",
-      "thumbnailUrl": "https://example.com/thumbs/cidade-de-deus.jpg"
+      "titulo": "O Pequeno Urso",
+      "ano": 1995,
+      "duracaoSegundos": 500,
+      "generos": [
+        "Desenho",
+        "Infantil"
+      ],
+      "nota": 7.4,
+      "descricao": ".",
+      "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E36 - A Festa na Casa do Coruja.mp4",
+      "posterPath": "m001/poster.jpg"
     },
     {
       "id": "m002",
       "titulo": "Central do Brasil",
       "ano": 1998,
       "duracaoSegundos": 6780,
-      "generos": ["Drama"],
+      "generos": [
+        "Drama"
+      ],
       "nota": 8.0,
       "descricao": "Uma mulher e um menino viajam pelo interior em busca do pai dele.",
-      "thumbnailUrl": "https://example.com/thumbs/central-do-brasil.jpg"
+      "videoPath": "m002/video.mp4",
+      "posterPath": "m002/poster.jpg"
     },
     {
       "id": "m003",
       "titulo": "O Auto da Compadecida",
       "ano": 2000,
       "duracaoSegundos": 6240,
-      "generos": ["Comedia", "Aventura"],
+      "generos": [
+        "Comedia",
+        "Aventura"
+      ],
       "nota": 8.7,
       "descricao": "Dois amigos aprontam no sertao e tentam sobreviver com esperteza.",
-      "thumbnailUrl": "https://example.com/thumbs/auto-da-compadecida.jpg"
+      "videoPath": "m003/video.mp4",
+      "posterPath": "m003/poster.jpg"
     },
     {
       "id": "m004",
       "titulo": "Parasita",
       "ano": 2019,
       "duracaoSegundos": 7920,
-      "generos": ["Drama", "Suspense"],
+      "generos": [
+        "Drama",
+        "Suspense"
+      ],
       "nota": 8.5,
       "descricao": "Uma familia entra na vida de outra, e as coisas saem do controle.",
-      "thumbnailUrl": "https://example.com/thumbs/parasita.jpg"
+      "videoPath": "m004/video.mp4",
+      "posterPath": "m004/poster.jpg"
     },
     {
       "id": "m005",
       "titulo": "A Viagem de Chihiro",
       "ano": 2001,
       "duracaoSegundos": 7500,
-      "generos": ["Animacao", "Fantasia"],
+      "generos": [
+        "Animacao",
+        "Fantasia"
+      ],
       "nota": 8.6,
       "descricao": "Uma garota entra em um mundo estranho e tenta salvar os pais.",
-      "thumbnailUrl": "https://example.com/thumbs/chihiro.jpg"
+      "videoPath": "m005/video.mp4",
+      "posterPath": "m005/poster.jpg"
     },
     {
       "id": "m006",
       "titulo": "Interestelar",
       "ano": 2014,
       "duracaoSegundos": 10140,
-      "generos": ["Ficcao", "Aventura"],
+      "generos": [
+        "Ficcao",
+        "Aventura"
+      ],
       "nota": 8.7,
       "descricao": "Uma missao espacial busca uma nova casa para a humanidade.",
-      "thumbnailUrl": "https://example.com/thumbs/interestelar.jpg"
+      "videoPath": "m006/video.mp4",
+      "posterPath": "m006/poster.jpg"
     },
     {
       "id": "m007",
       "titulo": "O Poderoso Chefao",
       "ano": 1972,
       "duracaoSegundos": 10500,
-      "generos": ["Crime", "Drama"],
+      "generos": [
+        "Crime",
+        "Drama"
+      ],
       "nota": 9.2,
       "descricao": "A ascensao e os dilemas de uma familia mafiosa.",
-      "thumbnailUrl": "https://example.com/thumbs/poderoso-chefao.jpg"
+      "videoPath": "m007/video.mp4",
+      "posterPath": "m007/poster.jpg"
     },
     {
       "id": "m008",
       "titulo": "Matrix",
       "ano": 1999,
       "duracaoSegundos": 8160,
-      "generos": ["Acao", "Ficcao"],
+      "generos": [
+        "Acao",
+        "Ficcao"
+      ],
       "nota": 8.7,
       "descricao": "Um programador descobre que a realidade pode ser uma simulacao.",
-      "thumbnailUrl": "https://example.com/thumbs/matrix.jpg"
+      "videoPath": "m008/video.mp4",
+      "posterPath": "m008/poster.jpg"
     },
     {
       "id": "m009",
       "titulo": "Mad Max: Estrada da Furia",
       "ano": 2015,
       "duracaoSegundos": 7200,
-      "generos": ["Acao", "Aventura"],
+      "generos": [
+        "Acao",
+        "Aventura"
+      ],
       "nota": 8.1,
       "descricao": "Uma fuga explosiva em um deserto pos-apocaliptico.",
-      "thumbnailUrl": "https://example.com/thumbs/mad-max.jpg"
+      "videoPath": "m009/video.mp4",
+      "posterPath": "m009/poster.jpg"
     },
     {
       "id": "m010",
       "titulo": "A Chegada",
       "ano": 2016,
       "duracaoSegundos": 6960,
-      "generos": ["Ficcao", "Drama"],
+      "generos": [
+        "Ficcao",
+        "Drama"
+      ],
       "nota": 7.9,
       "descricao": "Uma linguista tenta se comunicar com visitantes misteriosos.",
-      "thumbnailUrl": "null"
+      "videoPath": "m010/video.mp4",
+      "posterPath": "m010/poster.jpg"
     }
   ],
   "meta": {

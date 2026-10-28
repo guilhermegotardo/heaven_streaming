@@ -103,6 +103,8 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Expanded(child: _buildPoster(video)),
+                    const SizedBox(height: 16),
                     Text(
                       video.titulo,
                       textAlign: TextAlign.center,
@@ -138,11 +140,13 @@ class _HomePageState extends State<HomePage> {
 
         ElevatedButton(
           onPressed: () {
+            final video = videos[_currentPage];
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (_) => const PlayerPage(
-                  assetPath: 'assets/videos/sample_video.mp4',
+                builder: (_) => PlayerPage(
+                  videoUri: CatalogController.instance.library.resolve(video.videoPath),
+                  title: video.titulo,
                 ),
               ),
             );
@@ -151,6 +155,28 @@ class _HomePageState extends State<HomePage> {
         ),
 
       ],
+    );
+  }
+
+  Widget _buildPoster(Video video) {
+    const placeholder = AspectRatio(
+      aspectRatio: 2 / 3,
+      child: ColoredBox(
+        color: Colors.white10,
+        child: Icon(Icons.movie, size: 64, color: Colors.white38),
+      ),
+    );
+
+    final posterPath = video.posterPath;
+    if (posterPath == null || posterPath.isEmpty) return placeholder;
+
+    return Padding(
+      padding: const EdgeInsets.only(top: 16),
+      child: Image.network(
+        CatalogController.instance.library.resolve(posterPath).toString(),
+        fit: BoxFit.contain,
+        errorBuilder: (_, _, _) => placeholder,
+      ),
     );
   }
 

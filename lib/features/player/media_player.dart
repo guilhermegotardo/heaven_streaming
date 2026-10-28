@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 class PlayerPage extends StatefulWidget {
-  final String assetPath;
+  final Uri videoUri;
+  final String title;
 
   const PlayerPage({
     super.key,
-    required this.assetPath,
+    required this.videoUri,
+    required this.title,
   });
 
   @override
@@ -22,7 +24,7 @@ class _PlayerPageState extends State<PlayerPage> {
     super.initState();
 
     // Rebuilds when the video plays, pauses or ends, keeping the FAB icon in sync.
-    _controller = VideoPlayerController.asset(widget.assetPath)
+    _controller = VideoPlayerController.networkUrl(widget.videoUri)
       ..addListener(_onControllerUpdate);
     _initialize();
   }
@@ -63,7 +65,7 @@ class _PlayerPageState extends State<PlayerPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Player'),
+        title: Text(widget.title),
       ),
       body: Center(
         child: _hasError

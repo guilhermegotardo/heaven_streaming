@@ -24,7 +24,10 @@ class Video {
 
   final double nota;
   final String descricao;
-  final String thumbnailUrl;
+
+  /// Caminhos relativos à raiz da biblioteca (ex.: "m001/video.mp4").
+  final String videoPath;
+  final String? posterPath;
 
   Video(
     {
@@ -35,7 +38,8 @@ class Video {
     required this.generos,
     required this.nota,
     required this.descricao,
-    required this.thumbnailUrl,
+    required this.videoPath,
+    this.posterPath,
   }
   );
 
