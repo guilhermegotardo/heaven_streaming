@@ -24,8 +24,13 @@ Video _$VideoFromJson(Map<String, dynamic> json) => Video(
   generos: (json['generos'] as List<dynamic>).map((e) => e as String).toList(),
   nota: (json['nota'] as num).toDouble(),
   descricao: json['descricao'] as String,
-  videoPath: json['videoPath'] as String,
+  videoPath: json['videoPath'] as String?,
   posterPath: json['posterPath'] as String?,
+  episodios:
+      (json['episodios'] as List<dynamic>?)
+          ?.map((e) => Episodio.fromJson(e as Map<String, dynamic>))
+          .toList() ??
+      [],
 );
 
 Map<String, dynamic> _$VideoToJson(Video instance) => <String, dynamic>{
@@ -38,4 +43,19 @@ Map<String, dynamic> _$VideoToJson(Video instance) => <String, dynamic>{
   'descricao': instance.descricao,
   'videoPath': instance.videoPath,
   'posterPath': instance.posterPath,
+  'episodios': instance.episodios,
+};
+
+Episodio _$EpisodioFromJson(Map<String, dynamic> json) => Episodio(
+  temporada: (json['temporada'] as num).toInt(),
+  numero: (json['numero'] as num).toInt(),
+  titulo: json['titulo'] as String,
+  videoPath: json['videoPath'] as String,
+);
+
+Map<String, dynamic> _$EpisodioToJson(Episodio instance) => <String, dynamic>{
+  'temporada': instance.temporada,
+  'numero': instance.numero,
+  'titulo': instance.titulo,
+  'videoPath': instance.videoPath,
 };

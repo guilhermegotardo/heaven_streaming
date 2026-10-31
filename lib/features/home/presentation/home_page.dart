@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../dat/catalog/catalogo.dart';
 import '../../../dat/catalog/catalogo_controller.dart';
 import '../../player/media_player.dart';
+import '../../series/presentation/episodes_page.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -141,17 +142,21 @@ class _HomePageState extends State<HomePage> {
         ElevatedButton(
           onPressed: () {
             final video = videos[_currentPage];
+            final videoPath = video.videoPath;
+            if (!video.isSerie && videoPath == null) return;
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (_) => PlayerPage(
-                  videoUri: CatalogController.instance.library.resolve(video.videoPath),
-                  title: video.titulo,
-                ),
+                builder: (_) => video.isSerie
+                    ? EpisodesPage(serie: video)
+                    : PlayerPage(
+                        videoUri: CatalogController.instance.library.resolve(videoPath!),
+                        title: video.titulo,
+                      ),
               ),
             );
           },
-          child: const Text('Play'),
+          child: Text(videos[_currentPage].isSerie ? 'Episódios' : 'Play'),
         ),
 
       ],

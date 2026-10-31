@@ -24,8 +24,243 @@
       ],
       "nota": 7.4,
       "descricao": ".",
-      "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E36 - A Festa na Casa do Coruja.mp4",
-      "posterPath": "m001/poster.jpg"
+      "posterPath": "m001/poster.jpg",
+      "episodios": [
+        {
+          "temporada": 1,
+          "numero": 1,
+          "titulo": "Brincando na Neve",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E01 - Brincando na Neve.mp4"
+        },
+        {
+          "temporada": 1,
+          "numero": 2,
+          "titulo": "Brincando de Esconde-Esconde",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E02 - Brincando de Esconde-Esconde.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 3,
+          "titulo": "Indo Pra Lua",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E03 - Indo Pra Lua.mp4"
+        },
+        {
+          "temporada": 1,
+          "numero": 4,
+          "titulo": "A Sopa de Aniversário",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E04 - A Sopa de Aniversário.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 5,
+          "titulo": "O Urso Polar",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E05 - O Urso Polar.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 6,
+          "titulo": "Dia de Pescaria",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E06 - Dia de Pescaria.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 7,
+          "titulo": "A Noite Daquelas",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E07 - A Noite Daquelas.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 8,
+          "titulo": "Hora do Banho",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E08 - Hora do Banho.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 9,
+          "titulo": "A Volta do Papai Urso",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E09 - A Volta do Papai Urso.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 10,
+          "titulo": "A Gripe",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E10 - A Gripe.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 11,
+          "titulo": "Os Exploradores",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E11 - Os Exploradores.mp4"
+        },
+        {
+          "temporada": 1,
+          "numero": 12,
+          "titulo": "Pescando com Papai Urso",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E12 - Pescando com Papai Urso.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 13,
+          "titulo": "O Pedido do Pequeno Urso",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E13 - O Pedido do Pequeno Urso.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 14,
+          "titulo": "Brincando com a Sombra",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E14 - Brincando com a Sombra.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 15,
+          "titulo": "Um Presente para Mamãe Urso",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E15 - Um Presente para Mamãe Urso.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 16,
+          "titulo": "Visitando a Vovó",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E16 - Visitando a Vovó.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 17,
+          "titulo": "Brincando com o Vovô Urso",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E17 - Brincando com o Vovô Urso.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 18,
+          "titulo": "O Sábia da Mamãe Urso",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E18 - O Sábia da Mamãe Urso.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 19,
+          "titulo": "Soluçando sem Parar",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E19 - Soluçando sem Parar.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 20,
+          "titulo": "Dormindo como Pedra",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E20 - Dormindo como Pedra.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 21,
+          "titulo": "O Dia da Escalada",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E21 - O Dia da Escalada.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 22,
+          "titulo": "A Sereia do Pequeno Urso",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E22 - A Sereia do Pequeno Urso.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 23,
+          "titulo": "As panquecas voadoras do Papai Urso",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E23 - As panquecas voadoras do Papai Urso.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 24,
+          "titulo": "Um Presente Especial - Maracas",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E24 - Um Presente Especial - Maracas.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 25,
+          "titulo": "Retrato de Família",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E25 - Retrato de Família.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 26,
+          "titulo": "A nova Amiga",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E26 - A nova Amiga.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 27,
+          "titulo": "A Visita de Emily",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E27 - A Visita de Emily.mp4"
+        },
+        {
+          "temporada": 1,
+          "numero": 28,
+          "titulo": "Os Três Patinhos",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E28 - Os Três Patinhos.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 30,
+          "titulo": "O Lago dos Sapos",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E30 - O Lago dos Sapos.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 31,
+          "titulo": "Dia de Ventania",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E31 - Dia de Ventania.mp4"
+        },
+        {
+          "temporada": 1,
+          "numero": 33,
+          "titulo": "Nada de Cansaço",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E33 - Nada de Cansaço.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 34,
+          "titulo": "O Sotam do Vovô Urso",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E34 - O Sotam do Vovô Urso.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 35,
+          "titulo": "O Ovo",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E35 - O Ovo.mp4"
+        },
+        {
+          "temporada": 1,
+          "numero": 36,
+          "titulo": "A Festa na Casa do Coruja",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E36 - A Festa na Casa do Coruja.mp4"
+        },
+        {
+          "temporada": 1,
+          "numero": 40,
+          "titulo": "O Mágico",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E40 - O Mágico.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 41,
+          "titulo": "Cuidando da mamãe urso",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E41 - Cuidando da mamãe urso.mp4"
+        },
+        {
+          "temporada": 1,
+          "numero": 42,
+          "titulo": "O Grande Pequeno Urso",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E42 - O Grande Pequeno Urso.mkv"
+        },
+        {
+          "temporada": 1,
+          "numero": 43,
+          "titulo": "Viajando até as Estrelas",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E43 - Viajando até as Estrelas.mp4"
+        },
+        {
+          "temporada": 1,
+          "numero": 45,
+          "titulo": "Os Pequenos Exploradores",
+          "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E45 - Os Pequenos Exploradores.mp4"
+        }
+      ]
     },
     {
       "id": "m002",

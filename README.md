@@ -56,6 +56,24 @@ example_library/
     └── poster.jpg
 ```
 
+Séries não têm `videoPath`; em vez disso trazem uma lista `episodios`:
+
+```json
+{
+  "id": "m001",
+  "titulo": "O Pequeno Urso",
+  "posterPath": "m001/poster.png",
+  "episodios": [
+    {
+      "temporada": 1,
+      "numero": 1,
+      "titulo": "Brincando na Neve",
+      "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E01 - Brincando na Neve.mp4"
+    }
+  ]
+}
+```
+
 Rodando em dois terminais:
 
 ```bash
