@@ -150,8 +150,12 @@ class _HomePageState extends State<HomePage> {
                 builder: (_) => video.isSerie
                     ? EpisodesPage(serie: video)
                     : PlayerPage(
-                        videoUri: CatalogController.instance.library.resolve(videoPath!),
-                        title: video.titulo,
+                        playlist: [
+                          PlayerItem(
+                            videoUri: CatalogController.instance.library.resolve(videoPath!),
+                            title: video.titulo,
+                          ),
+                        ],
                       ),
               ),
             );

@@ -16,6 +16,15 @@ class EpisodesPage extends StatelessWidget {
           ? a.temporada.compareTo(b.temporada)
           : a.numero.compareTo(b.numero));
 
+    // Todos os episódios em ordem, para o player seguir para o próximo sozinho.
+    final playlist = [
+      for (final episodio in episodios)
+        PlayerItem(
+          videoUri: CatalogController.instance.library.resolve(episodio.videoPath),
+          title: "${serie.titulo} - T${episodio.temporada}E${episodio.numero} - ${episodio.titulo}",
+        ),
+    ];
+
     final porTemporada = <int, List<Episodio>>{};
     for (final episodio in episodios) {
       porTemporada.putIfAbsent(episodio.temporada, () => []).add(episodio);
@@ -45,8 +54,8 @@ class EpisodesPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (_) => PlayerPage(
-                      videoUri: CatalogController.instance.library.resolve(episodio.videoPath),
-                      title: "${serie.titulo} - T${episodio.temporada}E${episodio.numero} - ${episodio.titulo}",
+                      playlist: playlist,
+                      initialIndex: episodios.indexOf(episodio),
                     ),
                   ),
                 ),
