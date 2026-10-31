@@ -11,7 +11,7 @@
       "rating": 0,
       "description": "Sample Video exemple.",
       "videoPath": "m000/video.mp4",
-      "posterPath": "m000/poster.jpg"
+      "posterPath": "m000/poster.png"
     },
     {
       "id": "m001",
@@ -24,7 +24,7 @@
       ],
       "rating": 7.4,
       "description": ".",
-      "posterPath": "m001/poster.jpg",
+      "posterPath": "m001/poster.png",
       "episodes": [
         {
           "season": 1,

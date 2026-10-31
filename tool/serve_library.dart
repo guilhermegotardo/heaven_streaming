@@ -27,6 +27,14 @@ Middleware _cors() => (inner) => (request) async {
   return response.change(headers: _corsHeaders);
 };
 
+// Without Cache-Control the browser caches catalog.json on its own and keeps
+// serving a stale copy after the file changes on disk.
+Middleware _noCacheCatalog() => (inner) => (request) async {
+  final response = await inner(request);
+  if (request.url.path != 'catalog.json') return response;
+  return response.change(headers: {'Cache-Control': 'no-cache'});
+};
+
 Future<void> main(List<String> args) async {
   final root = args.isNotEmpty ? args[0] : 'example_library';
   final port = args.length > 1 ? int.parse(args[1]) : 8081;
@@ -39,6 +47,7 @@ Future<void> main(List<String> args) async {
   final handler = const Pipeline()
       .addMiddleware(logRequests())
       .addMiddleware(_cors())
+      .addMiddleware(_noCacheCatalog())
       .addHandler(createStaticHandler(root));
 
   final server = await io.serve(handler, InternetAddress.anyIPv4, port);
