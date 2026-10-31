@@ -11,7 +11,7 @@ class PlayerItem {
 }
 
 class PlayerPage extends StatefulWidget {
-  /// Itens reproduzidos em sequência: ao terminar um, o próximo começa sozinho.
+  /// Items played in sequence: when one ends, the next one starts by itself.
   final List<PlayerItem> playlist;
   final int initialIndex;
 
@@ -38,7 +38,7 @@ class _PlayerPageState extends State<PlayerPage> {
   bool _showControls = true;
   Timer? _hideTimer;
 
-  /// Evita reabrir a contagem depois que o usuário a cancelou.
+  /// Keeps the countdown from reopening after the user cancelled it.
   bool _endHandled = false;
   Timer? _nextTimer;
   int? _nextIn;
@@ -57,7 +57,7 @@ class _PlayerPageState extends State<PlayerPage> {
     if (_hasController) {
       final old = _controller;
       old.removeListener(_onControllerUpdate);
-      // O VideoPlayer antigo ainda está na árvore até o próximo frame.
+      // The old VideoPlayer stays in the tree until the next frame.
       WidgetsBinding.instance.addPostFrameCallback((_) => old.dispose());
     }
 
@@ -112,7 +112,7 @@ class _PlayerPageState extends State<PlayerPage> {
     super.dispose();
   }
 
-  // ---- Controles ----
+  // ---- Controls ----
 
   void _togglePlayPause() {
     if (_controller.value.isPlaying) {
@@ -154,7 +154,7 @@ class _PlayerPageState extends State<PlayerPage> {
     setState(() => _open(_index - 1));
   }
 
-  // ---- Próximo episódio automático ----
+  // ---- Auto-play next episode ----
 
   void _startNextCountdown() {
     _nextIn = _nextCountdownSeconds;
@@ -174,7 +174,7 @@ class _PlayerPageState extends State<PlayerPage> {
     _nextIn = null;
   }
 
-  // ---- Visibilidade dos controles ----
+  // ---- Controls visibility ----
 
   void _scheduleHide() {
     _hideTimer?.cancel();
@@ -205,7 +205,7 @@ class _PlayerPageState extends State<PlayerPage> {
         title: Text(_current.title),
       ),
       body: _hasError
-          ? const Center(child: Text('Não foi possível reproduzir o vídeo.'))
+          ? const Center(child: Text('Unable to play this video.'))
           : !isReady
               ? const Center(child: CircularProgressIndicator())
               : MouseRegion(
@@ -244,9 +244,9 @@ class _PlayerPageState extends State<PlayerPage> {
   Widget _buildControls(BuildContext context) {
     final value = _controller.value;
     final (playIcon, playLabel) = value.isPlaying
-        ? (Icons.pause, 'Pausar')
+        ? (Icons.pause, 'Pause')
         : value.position > Duration.zero && !_endHandled
-            ? (Icons.play_arrow, 'Continuar')
+            ? (Icons.play_arrow, 'Resume')
             : (Icons.play_arrow, 'Play');
 
     return Align(
@@ -277,13 +277,13 @@ class _PlayerPageState extends State<PlayerPage> {
                 const Spacer(),
                 if (widget.playlist.length > 1)
                   IconButton(
-                    tooltip: 'Anterior',
+                    tooltip: 'Previous',
                     color: Colors.white,
                     onPressed: _index > 0 ? _playPrevious : null,
                     icon: const Icon(Icons.skip_previous),
                   ),
                 IconButton(
-                  tooltip: 'Voltar 10s',
+                  tooltip: 'Back 10s',
                   color: Colors.white,
                   onPressed: () => _seekRelative(-_seekStep),
                   icon: const Icon(Icons.replay_10),
@@ -298,23 +298,23 @@ class _PlayerPageState extends State<PlayerPage> {
                   onPressed: _stop,
                   style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
                   icon: const Icon(Icons.stop),
-                  label: const Text('Parar'),
+                  label: const Text('Stop'),
                 ),
                 IconButton(
-                  tooltip: 'Avançar 10s',
+                  tooltip: 'Forward 10s',
                   color: Colors.white,
                   onPressed: () => _seekRelative(_seekStep),
                   icon: const Icon(Icons.forward_10),
                 ),
                 if (widget.playlist.length > 1)
                   IconButton(
-                    tooltip: 'Próximo',
+                    tooltip: 'Next',
                     color: Colors.white,
                     onPressed: _hasNext ? _playNext : null,
                     icon: const Icon(Icons.skip_next),
                   ),
                 const Spacer(),
-                // Mantém os botões centralizados em relação ao tempo à esquerda.
+                // Keeps the buttons centered relative to the time on the left.
                 Opacity(
                   opacity: 0,
                   child: Text(
@@ -343,7 +343,7 @@ class _PlayerPageState extends State<PlayerPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Próximo episódio em $_nextIn s',
+                'Next episode in ${_nextIn}s',
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: 4),
@@ -357,13 +357,13 @@ class _PlayerPageState extends State<PlayerPage> {
                 children: [
                   TextButton(
                     onPressed: () => setState(_cancelNext),
-                    child: const Text('Cancelar'),
+                    child: const Text('Cancel'),
                   ),
                   const SizedBox(width: 8),
                   FilledButton.icon(
                     onPressed: _playNext,
                     icon: const Icon(Icons.skip_next),
-                    label: const Text('Assistir agora'),
+                    label: const Text('Watch now'),
                   ),
                 ],
               ),

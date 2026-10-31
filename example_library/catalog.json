@@ -2,388 +2,388 @@
   "videos": [
     {
       "id": "m000",
-      "titulo": "Sample",
-      "ano": 2077,
-      "duracaoSegundos": 5,
-      "generos": [
+      "title": "Sample",
+      "year": 2077,
+      "durationSeconds": 5,
+      "genres": [
         "NA"
       ],
-      "nota": 0,
-      "descricao": "Sample Video exemple.",
+      "rating": 0,
+      "description": "Sample Video exemple.",
       "videoPath": "m000/video.mp4",
       "posterPath": "m000/poster.jpg"
     },
     {
       "id": "m001",
-      "titulo": "O Pequeno Urso",
-      "ano": 1995,
-      "duracaoSegundos": 500,
-      "generos": [
+      "title": "O Pequeno Urso",
+      "year": 1995,
+      "durationSeconds": 500,
+      "genres": [
         "Desenho",
         "Infantil"
       ],
-      "nota": 7.4,
-      "descricao": ".",
+      "rating": 7.4,
+      "description": ".",
       "posterPath": "m001/poster.jpg",
-      "episodios": [
+      "episodes": [
         {
-          "temporada": 1,
-          "numero": 1,
-          "titulo": "Brincando na Neve",
+          "season": 1,
+          "number": 1,
+          "title": "Brincando na Neve",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E01 - Brincando na Neve.mp4"
         },
         {
-          "temporada": 1,
-          "numero": 2,
-          "titulo": "Brincando de Esconde-Esconde",
+          "season": 1,
+          "number": 2,
+          "title": "Brincando de Esconde-Esconde",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E02 - Brincando de Esconde-Esconde.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 3,
-          "titulo": "Indo Pra Lua",
+          "season": 1,
+          "number": 3,
+          "title": "Indo Pra Lua",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E03 - Indo Pra Lua.mp4"
         },
         {
-          "temporada": 1,
-          "numero": 4,
-          "titulo": "A Sopa de Aniversário",
+          "season": 1,
+          "number": 4,
+          "title": "A Sopa de Aniversário",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E04 - A Sopa de Aniversário.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 5,
-          "titulo": "O Urso Polar",
+          "season": 1,
+          "number": 5,
+          "title": "O Urso Polar",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E05 - O Urso Polar.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 6,
-          "titulo": "Dia de Pescaria",
+          "season": 1,
+          "number": 6,
+          "title": "Dia de Pescaria",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E06 - Dia de Pescaria.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 7,
-          "titulo": "A Noite Daquelas",
+          "season": 1,
+          "number": 7,
+          "title": "A Noite Daquelas",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E07 - A Noite Daquelas.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 8,
-          "titulo": "Hora do Banho",
+          "season": 1,
+          "number": 8,
+          "title": "Hora do Banho",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E08 - Hora do Banho.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 9,
-          "titulo": "A Volta do Papai Urso",
+          "season": 1,
+          "number": 9,
+          "title": "A Volta do Papai Urso",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E09 - A Volta do Papai Urso.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 10,
-          "titulo": "A Gripe",
+          "season": 1,
+          "number": 10,
+          "title": "A Gripe",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E10 - A Gripe.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 11,
-          "titulo": "Os Exploradores",
+          "season": 1,
+          "number": 11,
+          "title": "Os Exploradores",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E11 - Os Exploradores.mp4"
         },
         {
-          "temporada": 1,
-          "numero": 12,
-          "titulo": "Pescando com Papai Urso",
+          "season": 1,
+          "number": 12,
+          "title": "Pescando com Papai Urso",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E12 - Pescando com Papai Urso.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 13,
-          "titulo": "O Pedido do Pequeno Urso",
+          "season": 1,
+          "number": 13,
+          "title": "O Pedido do Pequeno Urso",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E13 - O Pedido do Pequeno Urso.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 14,
-          "titulo": "Brincando com a Sombra",
+          "season": 1,
+          "number": 14,
+          "title": "Brincando com a Sombra",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E14 - Brincando com a Sombra.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 15,
-          "titulo": "Um Presente para Mamãe Urso",
+          "season": 1,
+          "number": 15,
+          "title": "Um Presente para Mamãe Urso",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E15 - Um Presente para Mamãe Urso.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 16,
-          "titulo": "Visitando a Vovó",
+          "season": 1,
+          "number": 16,
+          "title": "Visitando a Vovó",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E16 - Visitando a Vovó.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 17,
-          "titulo": "Brincando com o Vovô Urso",
+          "season": 1,
+          "number": 17,
+          "title": "Brincando com o Vovô Urso",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E17 - Brincando com o Vovô Urso.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 18,
-          "titulo": "O Sábia da Mamãe Urso",
+          "season": 1,
+          "number": 18,
+          "title": "O Sábia da Mamãe Urso",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E18 - O Sábia da Mamãe Urso.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 19,
-          "titulo": "Soluçando sem Parar",
+          "season": 1,
+          "number": 19,
+          "title": "Soluçando sem Parar",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E19 - Soluçando sem Parar.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 20,
-          "titulo": "Dormindo como Pedra",
+          "season": 1,
+          "number": 20,
+          "title": "Dormindo como Pedra",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E20 - Dormindo como Pedra.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 21,
-          "titulo": "O Dia da Escalada",
+          "season": 1,
+          "number": 21,
+          "title": "O Dia da Escalada",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E21 - O Dia da Escalada.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 22,
-          "titulo": "A Sereia do Pequeno Urso",
+          "season": 1,
+          "number": 22,
+          "title": "A Sereia do Pequeno Urso",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E22 - A Sereia do Pequeno Urso.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 23,
-          "titulo": "As panquecas voadoras do Papai Urso",
+          "season": 1,
+          "number": 23,
+          "title": "As panquecas voadoras do Papai Urso",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E23 - As panquecas voadoras do Papai Urso.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 24,
-          "titulo": "Um Presente Especial - Maracas",
+          "season": 1,
+          "number": 24,
+          "title": "Um Presente Especial - Maracas",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E24 - Um Presente Especial - Maracas.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 25,
-          "titulo": "Retrato de Família",
+          "season": 1,
+          "number": 25,
+          "title": "Retrato de Família",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E25 - Retrato de Família.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 26,
-          "titulo": "A nova Amiga",
+          "season": 1,
+          "number": 26,
+          "title": "A nova Amiga",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E26 - A nova Amiga.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 27,
-          "titulo": "A Visita de Emily",
+          "season": 1,
+          "number": 27,
+          "title": "A Visita de Emily",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E27 - A Visita de Emily.mp4"
         },
         {
-          "temporada": 1,
-          "numero": 28,
-          "titulo": "Os Três Patinhos",
+          "season": 1,
+          "number": 28,
+          "title": "Os Três Patinhos",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E28 - Os Três Patinhos.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 30,
-          "titulo": "O Lago dos Sapos",
+          "season": 1,
+          "number": 30,
+          "title": "O Lago dos Sapos",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E30 - O Lago dos Sapos.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 31,
-          "titulo": "Dia de Ventania",
+          "season": 1,
+          "number": 31,
+          "title": "Dia de Ventania",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E31 - Dia de Ventania.mp4"
         },
         {
-          "temporada": 1,
-          "numero": 33,
-          "titulo": "Nada de Cansaço",
+          "season": 1,
+          "number": 33,
+          "title": "Nada de Cansaço",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E33 - Nada de Cansaço.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 34,
-          "titulo": "O Sotam do Vovô Urso",
+          "season": 1,
+          "number": 34,
+          "title": "O Sotam do Vovô Urso",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E34 - O Sotam do Vovô Urso.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 35,
-          "titulo": "O Ovo",
+          "season": 1,
+          "number": 35,
+          "title": "O Ovo",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E35 - O Ovo.mp4"
         },
         {
-          "temporada": 1,
-          "numero": 36,
-          "titulo": "A Festa na Casa do Coruja",
+          "season": 1,
+          "number": 36,
+          "title": "A Festa na Casa do Coruja",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E36 - A Festa na Casa do Coruja.mp4"
         },
         {
-          "temporada": 1,
-          "numero": 40,
-          "titulo": "O Mágico",
+          "season": 1,
+          "number": 40,
+          "title": "O Mágico",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E40 - O Mágico.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 41,
-          "titulo": "Cuidando da mamãe urso",
+          "season": 1,
+          "number": 41,
+          "title": "Cuidando da mamãe urso",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E41 - Cuidando da mamãe urso.mp4"
         },
         {
-          "temporada": 1,
-          "numero": 42,
-          "titulo": "O Grande Pequeno Urso",
+          "season": 1,
+          "number": 42,
+          "title": "O Grande Pequeno Urso",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E42 - O Grande Pequeno Urso.mkv"
         },
         {
-          "temporada": 1,
-          "numero": 43,
-          "titulo": "Viajando até as Estrelas",
+          "season": 1,
+          "number": 43,
+          "title": "Viajando até as Estrelas",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E43 - Viajando até as Estrelas.mp4"
         },
         {
-          "temporada": 1,
-          "numero": 45,
-          "titulo": "Os Pequenos Exploradores",
+          "season": 1,
+          "number": 45,
+          "title": "Os Pequenos Exploradores",
           "videoPath": "m001/O_Pequeno_Urso/SEASON_1-1/O Pequeno Urso - S01E45 - Os Pequenos Exploradores.mp4"
         }
       ]
     },
     {
       "id": "m002",
-      "titulo": "Central do Brasil",
-      "ano": 1998,
-      "duracaoSegundos": 6780,
-      "generos": [
+      "title": "Central do Brasil",
+      "year": 1998,
+      "durationSeconds": 6780,
+      "genres": [
         "Drama"
       ],
-      "nota": 8.0,
-      "descricao": "Uma mulher e um menino viajam pelo interior em busca do pai dele.",
+      "rating": 8.0,
+      "description": "Uma mulher e um menino viajam pelo interior em busca do pai dele.",
       "videoPath": "m002/video.mp4",
       "posterPath": "m002/poster.jpg"
     },
     {
       "id": "m003",
-      "titulo": "O Auto da Compadecida",
-      "ano": 2000,
-      "duracaoSegundos": 6240,
-      "generos": [
+      "title": "O Auto da Compadecida",
+      "year": 2000,
+      "durationSeconds": 6240,
+      "genres": [
         "Comedia",
         "Aventura"
       ],
-      "nota": 8.7,
-      "descricao": "Dois amigos aprontam no sertao e tentam sobreviver com esperteza.",
+      "rating": 8.7,
+      "description": "Dois amigos aprontam no sertao e tentam sobreviver com esperteza.",
       "videoPath": "m003/video.mp4",
       "posterPath": "m003/poster.jpg"
     },
     {
       "id": "m004",
-      "titulo": "Parasita",
-      "ano": 2019,
-      "duracaoSegundos": 7920,
-      "generos": [
+      "title": "Parasita",
+      "year": 2019,
+      "durationSeconds": 7920,
+      "genres": [
         "Drama",
         "Suspense"
       ],
-      "nota": 8.5,
-      "descricao": "Uma familia entra na vida de outra, e as coisas saem do controle.",
+      "rating": 8.5,
+      "description": "Uma familia entra na vida de outra, e as coisas saem do controle.",
       "videoPath": "m004/video.mp4",
       "posterPath": "m004/poster.jpg"
     },
     {
       "id": "m005",
-      "titulo": "A Viagem de Chihiro",
-      "ano": 2001,
-      "duracaoSegundos": 7500,
-      "generos": [
+      "title": "A Viagem de Chihiro",
+      "year": 2001,
+      "durationSeconds": 7500,
+      "genres": [
         "Animacao",
         "Fantasia"
       ],
-      "nota": 8.6,
-      "descricao": "Uma garota entra em um mundo estranho e tenta salvar os pais.",
+      "rating": 8.6,
+      "description": "Uma garota entra em um mundo estranho e tenta salvar os pais.",
       "videoPath": "m005/video.mp4",
       "posterPath": "m005/poster.jpg"
     },
     {
       "id": "m006",
-      "titulo": "Interestelar",
-      "ano": 2014,
-      "duracaoSegundos": 10140,
-      "generos": [
+      "title": "Interestelar",
+      "year": 2014,
+      "durationSeconds": 10140,
+      "genres": [
         "Ficcao",
         "Aventura"
       ],
-      "nota": 8.7,
-      "descricao": "Uma missao espacial busca uma nova casa para a humanidade.",
+      "rating": 8.7,
+      "description": "Uma missao espacial busca uma nova casa para a humanidade.",
       "videoPath": "m006/video.mp4",
       "posterPath": "m006/poster.jpg"
     },
     {
       "id": "m007",
-      "titulo": "O Poderoso Chefao",
-      "ano": 1972,
-      "duracaoSegundos": 10500,
-      "generos": [
+      "title": "O Poderoso Chefao",
+      "year": 1972,
+      "durationSeconds": 10500,
+      "genres": [
         "Crime",
         "Drama"
       ],
-      "nota": 9.2,
-      "descricao": "A ascensao e os dilemas de uma familia mafiosa.",
+      "rating": 9.2,
+      "description": "A ascensao e os dilemas de uma familia mafiosa.",
       "videoPath": "m007/video.mp4",
       "posterPath": "m007/poster.jpg"
     },
     {
       "id": "m008",
-      "titulo": "Matrix",
-      "ano": 1999,
-      "duracaoSegundos": 8160,
-      "generos": [
+      "title": "Matrix",
+      "year": 1999,
+      "durationSeconds": 8160,
+      "genres": [
         "Acao",
         "Ficcao"
       ],
-      "nota": 8.7,
-      "descricao": "Um programador descobre que a realidade pode ser uma simulacao.",
+      "rating": 8.7,
+      "description": "Um programador descobre que a realidade pode ser uma simulacao.",
       "videoPath": "m008/video.mp4",
       "posterPath": "m008/poster.jpg"
     },
     {
       "id": "m009",
-      "titulo": "Mad Max: Estrada da Furia",
-      "ano": 2015,
-      "duracaoSegundos": 7200,
-      "generos": [
+      "title": "Mad Max: Estrada da Furia",
+      "year": 2015,
+      "durationSeconds": 7200,
+      "genres": [
         "Acao",
         "Aventura"
       ],
-      "nota": 8.1,
-      "descricao": "Uma fuga explosiva em um deserto pos-apocaliptico.",
+      "rating": 8.1,
+      "description": "Uma fuga explosiva em um deserto pos-apocaliptico.",
       "videoPath": "m009/video.mp4",
       "posterPath": "m009/poster.jpg"
     },
     {
       "id": "m010",
-      "titulo": "A Chegada",
-      "ano": 2016,
-      "duracaoSegundos": 6960,
-      "generos": [
+      "title": "A Chegada",
+      "year": 2016,
+      "durationSeconds": 6960,
+      "genres": [
         "Ficcao",
         "Drama"
       ],
-      "nota": 7.9,
-      "descricao": "Uma linguista tenta se comunicar com visitantes misteriosos.",
+      "rating": 7.9,
+      "description": "Uma linguista tenta se comunicar com visitantes misteriosos.",
       "videoPath": "m010/video.mp4",
       "posterPath": "m010/poster.jpg"
     }

@@ -30,7 +30,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black, // escolha a cor da sua marca
+      backgroundColor: Colors.black, // pick your brand color
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

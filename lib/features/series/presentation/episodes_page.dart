@@ -1,61 +1,61 @@
 import 'package:flutter/material.dart';
 
-import '../../../dat/catalog/catalogo.dart';
-import '../../../dat/catalog/catalogo_controller.dart';
+import '../../../dat/catalog/catalog.dart';
+import '../../../dat/catalog/catalog_controller.dart';
 import '../../player/media_player.dart';
 
 class EpisodesPage extends StatelessWidget {
-  final Video serie;
+  final Video series;
 
-  const EpisodesPage({super.key, required this.serie});
+  const EpisodesPage({super.key, required this.series});
 
   @override
   Widget build(BuildContext context) {
-    final episodios = [...serie.episodios]
-      ..sort((a, b) => a.temporada != b.temporada
-          ? a.temporada.compareTo(b.temporada)
-          : a.numero.compareTo(b.numero));
+    final episodes = [...series.episodes]
+      ..sort((a, b) => a.season != b.season
+          ? a.season.compareTo(b.season)
+          : a.number.compareTo(b.number));
 
-    // Todos os episódios em ordem, para o player seguir para o próximo sozinho.
+    // Every episode in order, so the player can move on to the next one by itself.
     final playlist = [
-      for (final episodio in episodios)
+      for (final episode in episodes)
         PlayerItem(
-          videoUri: CatalogController.instance.library.resolve(episodio.videoPath),
-          title: "${serie.titulo} - T${episodio.temporada}E${episodio.numero} - ${episodio.titulo}",
+          videoUri: CatalogController.instance.library.resolve(episode.videoPath),
+          title: "${series.title} - S${episode.season}E${episode.number} - ${episode.title}",
         ),
     ];
 
-    final porTemporada = <int, List<Episodio>>{};
-    for (final episodio in episodios) {
-      porTemporada.putIfAbsent(episodio.temporada, () => []).add(episodio);
+    final bySeason = <int, List<Episode>>{};
+    for (final episode in episodes) {
+      bySeason.putIfAbsent(episode.season, () => []).add(episode);
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text(serie.titulo)),
+      appBar: AppBar(title: Text(series.title)),
       body: ListView(
         children: [
-          for (final MapEntry(key: temporada, value: lista) in porTemporada.entries) ...[
+          for (final MapEntry(key: season, value: seasonEpisodes) in bySeason.entries) ...[
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
               child: Text(
-                "Temporada $temporada",
+                "Season $season",
                 style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
-            for (final episodio in lista)
+            for (final episode in seasonEpisodes)
               ListTile(
                 leading: Text(
-                  "${episodio.numero}",
+                  "${episode.number}",
                   style: const TextStyle(fontSize: 18, color: Colors.white70),
                 ),
-                title: Text(episodio.titulo),
+                title: Text(episode.title),
                 trailing: const Icon(Icons.play_arrow),
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (_) => PlayerPage(
                       playlist: playlist,
-                      initialIndex: episodios.indexOf(episodio),
+                      initialIndex: episodes.indexOf(episode),
                     ),
                   ),
                 ),

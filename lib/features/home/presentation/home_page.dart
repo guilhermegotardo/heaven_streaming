@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../dat/catalog/catalogo.dart';
-import '../../../dat/catalog/catalogo_controller.dart';
+import '../../../dat/catalog/catalog.dart';
+import '../../../dat/catalog/catalog_controller.dart';
 import '../../player/media_player.dart';
 import '../../series/presentation/episodes_page.dart';
 
@@ -15,13 +15,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late PageController _pageController;
   int _currentPage = 0;
-  late Future<Catalogo> _catalogoFuture;
+  late Future<Catalog> _catalogFuture;
 
   @override
   void initState(){
     super.initState();
     _pageController = PageController();
-    _catalogoFuture = CatalogController.instance.loadCatalog();
+    _catalogFuture = CatalogController.instance.loadCatalog();
   }
 
   @override
@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
 
   void _retry() {
     setState(() {
-      _catalogoFuture = CatalogController.instance.loadCatalog();
+      _catalogFuture = CatalogController.instance.loadCatalog();
     });
   }
 
@@ -51,19 +51,19 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text("Heaven Stream"),
       ),
-      body: FutureBuilder<Catalogo>(
-        future: _catalogoFuture,
+      body: FutureBuilder<Catalog>(
+        future: _catalogFuture,
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text("Não foi possível carregar o catálogo."),
+                  const Text("Unable to load the catalog."),
                   const SizedBox(height: 16),
                   ElevatedButton(
                     onPressed: _retry,
-                    child: const Text("Tentar novamente"),
+                    child: const Text("Try again"),
                   ),
                 ],
               ),
@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget _buildCatalog(List<Video> videos) {
     if (videos.isEmpty) {
-      return const Center(child: Text("Nenhum vídeo no catálogo."));
+      return const Center(child: Text("No videos in the catalog."));
     }
 
     return Column(
@@ -107,12 +107,12 @@ class _HomePageState extends State<HomePage> {
                     Expanded(child: _buildPoster(video)),
                     const SizedBox(height: 16),
                     Text(
-                      video.titulo,
+                      video.title,
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 16),
                     Text(
-                      "Pagina ${index + 1}",
+                      "Page ${index + 1}",
                       style: const TextStyle(
                         fontSize: 18,
                         color: Colors.white70,
@@ -128,7 +128,7 @@ class _HomePageState extends State<HomePage> {
         const SizedBox(height: 20),
 
         Text(
-          "Página atual: ${_currentPage + 1}",
+          "Current page: ${_currentPage + 1}",
           style: const TextStyle(fontSize: 20),
         ),
 
@@ -143,24 +143,24 @@ class _HomePageState extends State<HomePage> {
           onPressed: () {
             final video = videos[_currentPage];
             final videoPath = video.videoPath;
-            if (!video.isSerie && videoPath == null) return;
+            if (!video.isSeries && videoPath == null) return;
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (_) => video.isSerie
-                    ? EpisodesPage(serie: video)
+                builder: (_) => video.isSeries
+                    ? EpisodesPage(series: video)
                     : PlayerPage(
                         playlist: [
                           PlayerItem(
                             videoUri: CatalogController.instance.library.resolve(videoPath!),
-                            title: video.titulo,
+                            title: video.title,
                           ),
                         ],
                       ),
               ),
             );
           },
-          child: Text(videos[_currentPage].isSerie ? 'Episódios' : 'Play'),
+          child: Text(videos[_currentPage].isSeries ? 'Episodes' : 'Play'),
         ),
 
       ],

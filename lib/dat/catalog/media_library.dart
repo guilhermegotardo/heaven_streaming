@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 
-/// Local de onde a biblioteca de vídeos é servida (pasta servida por HTTP).
+/// Where the video library is served from (a folder served over HTTP).
 ///
-/// Os caminhos do catalog.json são relativos a [baseUri]. Na v2.0 basta
-/// apontar [baseUri] para a CDN/servidor remoto.
+/// Paths in catalog.json are relative to [baseUri]. In v2.0 it is enough to
+/// point [baseUri] at the CDN/remote server.
 class MediaLibrary {
   final Uri baseUri;
 
@@ -12,8 +12,8 @@ class MediaLibrary {
           ? baseUri
           : baseUri.replace(path: '${baseUri.path}/');
 
-  /// Usa `--dart-define=LIBRARY_URL=...` se informado. Senão, na web usa o
-  /// mesmo host que serviu o app (porta 8081); no desktop, localhost:8081.
+  /// Uses `--dart-define=LIBRARY_URL=...` when given. Otherwise, on the web it
+  /// uses the same host that served the app (port 8081); on desktop, localhost:8081.
   factory MediaLibrary.fromEnvironment() {
     const url = String.fromEnvironment('LIBRARY_URL');
     if (url.isNotEmpty) return MediaLibrary(Uri.parse(url));

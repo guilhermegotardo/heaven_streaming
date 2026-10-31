@@ -1,11 +1,11 @@
-// Servidor de desenvolvimento da biblioteca de vídeos.
+// Development server for the video library.
 //
-// Uso: dart run tool/serve_library.dart [pasta] [porta]
-//   pasta: padrão example_library
-//   porta: padrão 8081
+// Usage: dart run tool/serve_library.dart [folder] [port]
+//   folder: defaults to example_library
+//   port: defaults to 8081
 //
-// Suporta Range requests (necessário para avançar/voltar no vídeo) e envia
-// cabeçalhos CORS para o app web, servido em outra porta, poder ler os arquivos.
+// Supports Range requests (needed to seek in the video) and sends CORS
+// headers so the web app, served on another port, can read the files.
 import 'dart:io';
 
 import 'package:shelf/shelf.dart';
@@ -32,7 +32,7 @@ Future<void> main(List<String> args) async {
   final port = args.length > 1 ? int.parse(args[1]) : 8081;
 
   if (!File('$root/catalog.json').existsSync()) {
-    stderr.writeln('catalog.json não encontrado em "$root".');
+    stderr.writeln('catalog.json not found in "$root".');
     exit(1);
   }
 
@@ -42,5 +42,5 @@ Future<void> main(List<String> args) async {
       .addHandler(createStaticHandler(root));
 
   final server = await io.serve(handler, InternetAddress.anyIPv4, port);
-  stdout.writeln('Biblioteca "$root" em http://${server.address.host}:${server.port}/');
+  stdout.writeln('Library "$root" at http://${server.address.host}:${server.port}/');
 }
