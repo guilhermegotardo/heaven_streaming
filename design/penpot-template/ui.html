@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Heaven Streaming Template</title>
+<style>
+  :root { --bg:#18181b; --fg:#f5f5f7; --muted:#a1a1aa; --line:#2c2c38; --accent:#E5383B; }
+  :root[data-theme="light"] { --bg:#ffffff; --fg:#18181b; --muted:#5c5c66; --line:#e4e4e7; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:16px; background:var(--bg); color:var(--fg); font:13px/1.5 system-ui, sans-serif; }
+  h1 { font-size:15px; margin:0 0 4px; }
+  p { margin:0 0 12px; color:var(--muted); }
+  ul { margin:0 0 14px; padding-left:18px; color:var(--muted); }
+  button { width:100%; height:36px; border:0; border-radius:8px; background:var(--accent); color:#fff; font-weight:600; cursor:pointer; }
+  button:disabled { opacity:.5; cursor:default; }
+  #log { margin-top:12px; height:150px; overflow:auto; border:1px solid var(--line); border-radius:8px; padding:8px; font:11px/1.6 ui-monospace, monospace; white-space:pre-wrap; }
+  .warn { color:#F5A524; } .error { color:#F04444; } .ok { color:#22C55E; }
+</style>
+</head>
+<body>
+  <h1>Heaven Streaming Template</h1>
+  <p>Builds the UI kit in this file. Use a new, empty file.</p>
+  <ul>
+    <li>Color &amp; typography library</li>
+    <li>11 main components</li>
+    <li>11 desktop/TV + 6 mobile screens</li>
+    <li>Clickable prototype flows</li>
+  </ul>
+  <button id="go">Generate template</button>
+  <div id="log"></div>
+<script>
+  const theme = new URLSearchParams(location.search).get('theme');
+  if (theme) document.documentElement.dataset.theme = theme;
+  const go = document.getElementById('go');
+  const out = document.getElementById('log');
+  const add = (msg, kind) => {
+    const d = document.createElement('div');
+    d.textContent = msg; if (kind) d.className = kind;
+    out.appendChild(d); out.scrollTop = out.scrollHeight;
+  };
+  go.addEventListener('click', () => {
+    go.disabled = true; go.textContent = 'Generating…';
+    parent.postMessage({ type: 'generate' }, '*');
+  });
+  window.addEventListener('message', (e) => {
+    const m = e.data;
+    if (!m || typeof m !== 'object') return;
+    if (m.type === 'log') add(m.msg, m.kind);
+    if (m.type === 'done') { go.textContent = m.error ? 'Failed — see log' : 'Done ✓'; }
+  });
+</script>
+</body>
+</html>

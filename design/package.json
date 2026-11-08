@@ -1,0 +1,11 @@
+{
+  "name": "heaven-streaming-design",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "tokens": "node build-tokens.mjs"
+  },
+  "devDependencies": {
+    "style-dictionary": "4.4.0"
+  }
+}

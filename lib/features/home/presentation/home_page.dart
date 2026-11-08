@@ -45,6 +45,15 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
+  void previousPage() {
+    if (_currentPage > 0) {
+      _pageController.previousPage(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.ease,
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,7 +113,36 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(child: _buildPoster(video)),
+                    Expanded(
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          IconButton(
+                            tooltip: 'Previous',
+                            iconSize: 40,
+                            onPressed: index > 0 ? previousPage : null,
+                            icon: const Icon(Icons.chevron_left),
+                          ),
+                          Flexible(
+                            child: MouseRegion(
+                              cursor: SystemMouseCursors.click,
+                              child: GestureDetector(
+                                onTap: () => _openVideo(video),
+                                child: _buildPoster(video),
+                              ),
+                            ),
+                          ),
+                          IconButton(
+                            tooltip: 'Next',
+                            iconSize: 40,
+                            onPressed: index < videos.length - 1
+                                ? () => nextPage(videos.length)
+                                : null,
+                            icon: const Icon(Icons.chevron_right),
+                          ),
+                        ],
+                      ),
+                    ),
                     const SizedBox(height: 16),
                     Text(
                       video.title,
@@ -134,36 +172,28 @@ class _HomePageState extends State<HomePage> {
 
         const SizedBox(height: 20),
 
-        ElevatedButton(
-          onPressed: () => nextPage(videos.length),
-          child: const Text("Next Page"),
-        ),
-
-        ElevatedButton(
-          onPressed: () {
-            final video = videos[_currentPage];
-            final videoPath = video.videoPath;
-            if (!video.isSeries && videoPath == null) return;
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) => video.isSeries
-                    ? EpisodesPage(series: video)
-                    : PlayerPage(
-                        playlist: [
-                          PlayerItem(
-                            videoUri: CatalogController.instance.library.resolve(videoPath!),
-                            title: video.title,
-                          ),
-                        ],
-                      ),
-              ),
-            );
-          },
-          child: Text(videos[_currentPage].isSeries ? 'Episodes' : 'Play'),
-        ),
-
       ],
+    );
+  }
+
+  /// Series open the episode list; movies go straight to the player.
+  void _openVideo(Video video) {
+    final videoPath = video.videoPath;
+    if (!video.isSeries && videoPath == null) return;
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => video.isSeries
+            ? EpisodesPage(series: video)
+            : PlayerPage(
+                playlist: [
+                  PlayerItem(
+                    videoUri: CatalogController.instance.library.resolve(videoPath!),
+                    title: video.title,
+                  ),
+                ],
+              ),
+      ),
     );
   }
 

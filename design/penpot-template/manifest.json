@@ -1,0 +1,6 @@
+{
+  "name": "Heaven Streaming Template",
+  "description": "Generates a streaming UI kit (design system, components, desktop/TV and mobile screens) using the Heaven Streaming tokens.",
+  "code": "/plugin.js",
+  "permissions": ["content:read", "content:write", "library:read", "library:write"]
+}
