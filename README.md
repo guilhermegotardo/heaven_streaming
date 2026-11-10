@@ -39,12 +39,23 @@ lib/
     │       └── splash_controller.dart
     ├── home/
     │   └── presentation/
-    │       └── home_page.dart
-    ├── series/
+    │       ├── home_page.dart                 # hero + poster rows, Home/Series/Movies filter
+    │       └── widgets/                       # hero banner, top bar, loading skeleton
+    ├── details/
     │   └── presentation/
-    │       └── episodes_page.dart
+    │       └── details_page.dart              # title details + episode list per season
     └── player/
-        └── media_player.dart                  # player with controls and auto-play next
+        ├── media_player.dart                  # player with controls and auto-play next
+        └── play_video.dart                    # opens the player for a movie or episode
+```
+
+Shared UI lives in `lib/core/`:
+
+```
+lib/core/
+├── theme/        # app_theme.dart + app_tokens.g.dart (generated from design/tokens)
+├── utils/        # video_display.dart (labels, sorted episodes, seasons)
+└── widgets/      # poster card, content row, episode tile, buttons, badges, states
 
 tool/
 └── serve_library.dart                         # dev server for the video library

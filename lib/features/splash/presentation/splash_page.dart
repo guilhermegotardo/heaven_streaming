@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../app/routes.dart';
+import '../../../core/theme/app_tokens.g.dart';
 import 'splash_controller.dart';
 
 class SplashPage extends StatefulWidget {
@@ -30,7 +31,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black, // pick your brand color
+      backgroundColor: AppColors.background,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -39,9 +40,14 @@ class _SplashPageState extends State<SplashPage> {
               'assets/images/gotflix_splash.png',
               width: 220,
             ),
-            const SizedBox(height: 24),
-            const CircularProgressIndicator(
-              color: Colors.red,
+            const SizedBox(height: AppSpacing.xl),
+            const SizedBox.square(
+              dimension: 36,
+              child: CircularProgressIndicator(
+                color: AppColors.primary,
+                backgroundColor: AppColors.border,
+                strokeWidth: 3,
+              ),
             ),
           ],
         ),

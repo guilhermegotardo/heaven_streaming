@@ -53,7 +53,9 @@ abstract final class AppTheme {
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(AppRadius.md)),
           ),
+          // Component text styles don't inherit ThemeData.fontFamily, so set it here.
           textStyle: const TextStyle(
+            fontFamily: AppFontFamily.base,
             fontSize: AppFontSize.body,
             fontWeight: AppFontWeight.semibold,
           ),
@@ -75,6 +77,7 @@ abstract final class AppTheme {
       chipTheme: const ChipThemeData(
         backgroundColor: AppColors.surfaceRaised,
         labelStyle: TextStyle(
+          fontFamily: AppFontFamily.base,
           color: AppColors.textPrimary,
           fontSize: AppFontSize.bodySm,
         ),

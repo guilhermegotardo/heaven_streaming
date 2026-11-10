@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'routes.dart';
 import '../core/theme/app_theme.dart';
@@ -13,6 +14,10 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'GOTFLIX',
       theme: AppTheme.dark,
+      // Lets desktop/web users drag the poster rows with the mouse too.
+      scrollBehavior: const MaterialScrollBehavior().copyWith(
+        dragDevices: PointerDeviceKind.values.toSet(),
+      ),
       initialRoute: AppRoutes.splash,
       routes: {
         AppRoutes.splash: (_) => const SplashPage(),
