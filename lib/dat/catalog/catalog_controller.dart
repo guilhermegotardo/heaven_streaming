@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 import 'catalog.dart';
 import 'library_catalog_data_source.dart';
 import 'media_library.dart';
@@ -17,6 +19,10 @@ class CatalogController {
     }
     return _catalog!;
   }
+
+  /// Lets tests provide a catalog without the HTTP library server.
+  @visibleForTesting
+  set debugCatalog(Catalog? value) => _catalog = value;
 
   Future<Catalog> loadCatalog() async {
     return _catalog ??= await LibraryCatalogDataSource(library).loadCatalog();

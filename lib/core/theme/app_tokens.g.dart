@@ -48,6 +48,13 @@ abstract final class AppSizes {
   static const iconSm = 16.0;
   static const iconMd = 24.0;
   static const iconLg = 32.0;
+  static const iconXl = 80.0;
+  static const navHeight = 96.0;
+  static const bottomNavHeight = 64.0;
+  static const buttonHeight = 48.0;
+  static const buttonHeightSm = 44.0;
+  static const profileAvatar = 180.0;
+  static const contentMaxWidth = 1200.0;
 }
 
 abstract final class AppOpacity {
@@ -64,13 +71,20 @@ abstract final class AppFontWeight {
   static const medium = FontWeight.w500;
   static const semibold = FontWeight.w600;
   static const bold = FontWeight.w700;
+  static const extrabold = FontWeight.w800;
 }
 
 abstract final class AppFontSize {
+  static const splash = 120.0;
+  static const hero = 88.0;
+  static const heroSm = 80.0;
+  static const displayLg = 56.0;
   static const display = 48.0;
   static const headline = 32.0;
+  static const logo = 28.0;
   static const title = 24.0;
   static const titleSm = 20.0;
+  static const bodyLg = 18.0;
   static const body = 16.0;
   static const bodySm = 14.0;
   static const caption = 12.0;
@@ -78,5 +92,6 @@ abstract final class AppFontSize {
 
 abstract final class AppLineHeight {
   static const tight = 1.2;
+  static const hero = 1.1;
   static const normal = 1.5;
 }
